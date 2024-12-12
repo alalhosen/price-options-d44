@@ -9,9 +9,11 @@ const NavBar = () => {
     ];
     return (
         <nav>
-            {
-                routes.map(route => <li key={route.id}><a href={`route.path`}>{route.name}</a></li>)
-            }
+            <ul className="flex">
+                {
+                    routes.map(route => <li className="mr-12" key={route.id}><a href={route.path}>{route.name}</a></li>)
+                }
+            </ul>
         </nav>
     );
 };
