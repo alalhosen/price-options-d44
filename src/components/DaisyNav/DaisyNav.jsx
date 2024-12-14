@@ -18,7 +18,7 @@ const DaisyNav = () => {
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul
+                    <ul 
                         tabIndex={0}
                         className="z-[1] bg-base-100 shadow mt-3 p-2 rounded-box w-52 dropdown-content menu menu-sm">
                         <li><a>Item 1</a></li>

@@ -10,7 +10,7 @@ const NavBar = () => {
     ];
     return (
         <nav>
-            <ul className="flex">
+            <ul className="md:flex">
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
