@@ -12,7 +12,7 @@ const NavBar = () => {
         { id: 5, path: "/dashboard", name: "Dashboard" },
     ];
     return (
-        <nav className="bg-lime-100 p-6 text-black">
+        <nav className="bg-yellow-200 p-6 text-black">
             <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
                 {
                     open === true ?
@@ -20,7 +20,7 @@ const NavBar = () => {
                         : <AiOutlineMenu />
                 }
             </div>
-            <ul className={`absolute md:flex duration-1000 ${open ?'top-16':'-top-60'} bg-yellow-200 shadow-lg px-6`}>
+            <ul className={`absolute md:static md:flex duration-1000 ${open ?'top-16':'-top-60'} bg-yellow-200 px-6`}>
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
