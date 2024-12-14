@@ -12,16 +12,15 @@ const NavBar = () => {
         { id: 5, path: "/dashboard", name: "Dashboard" },
     ];
     return (
-        <nav>
-            <div className="md:hidden" onClick={() => setOpen(!open)}>
+        <nav className="bg-lime-100 p-6 text-black">
+            <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
                 {
                     open === true ?
-                        <AiOutlineClose className="text-2xl" />
-                        : <AiOutlineMenu className="text-2xl" />
+                        <AiOutlineClose />
+                        : <AiOutlineMenu />
                 }
-
             </div>
-            <ul className="md:flex">
+            <ul className="absolute md:flex bg-yellow-200 shadow-lg px-6">
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
