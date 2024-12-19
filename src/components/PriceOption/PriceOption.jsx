@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 // import PropTypes from "prop-types";
 
-import Feature from "../Feature/Feature";
-
 const PriceOption = ({ option }) => {
   const { name, price, features } = option;
   return (
@@ -12,11 +10,6 @@ const PriceOption = ({ option }) => {
         <span className="text-3xl">/mon</span>
       </h2>
       <h4 className="text-3xl text-center my-8">{name}</h4>
-      <div>
-        {
-          features.map((feature, map)=><Feature key={index} feature={features}></Feature>)
-        }
-      </div>
     </div>
   );
 };
