@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
+import Feature from "../Feature/Feature";
 
 const PriceOption = ({ option }) => {
   const { name, price, features } = option;
@@ -10,10 +11,13 @@ const PriceOption = ({ option }) => {
         <span className="text-3xl">/mon</span>
       </h2>
       <h4 className="text-3xl text-center my-8">{name}</h4>
+      {
+        features.map((feature, index)=><Feature key={index} feature={feature}></Feature>)
+      }
     </div>
   );
 };
-// PriceOption.proptypes = {
-//   option: PropTypes.object,
-// };
+PriceOption.proptypes = {
+  option: PropTypes.object,
+};
 export default PriceOption;
