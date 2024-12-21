@@ -11,9 +11,12 @@ const PriceOption = ({ option }) => {
         <span className="text-3xl">/mon</span>
       </h2>
       <h4 className="text-4xl text-center my-6">{name}</h4>
+      <div className="pl-6">
       {
         features.map((feature, index)=><Feature key={index} feature={feature}></Feature>)
       }
+      </div>
+      <button className="pt-12 bg-green-500 w-full py-2 rounded-lg hover:bg-green-800 font-bold">Buy Now</button>
     </div>
   );
 };
