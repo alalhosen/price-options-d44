@@ -16,7 +16,7 @@ const PriceOption = ({ option }) => {
         features.map((feature, index)=><Feature key={index} feature={feature}></Feature>)
       }
       </div>
-      <button className="pt-12 bg-green-500 w-full py-2 rounded-lg hover:bg-green-800 font-bold">Buy Now</button>
+      <button className="p-12 bg-green-500 w-full py-2 rounded-lg hover:bg-green-800 font-bold">Buy Now</button>
     </div>
   );
 };
@@ -24,3 +24,4 @@ PriceOption.proptypes = {
   option: PropTypes.object,
 };
 export default PriceOption;
+
