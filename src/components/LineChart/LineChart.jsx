@@ -1,6 +1,6 @@
 import { LineChart, Line } from 'recharts';
 
-const LineChat = () => {
+const LineChart = () => {
     const data = [
         { name: "Alice", marks: 78 },
         { name: "Bob", marks: 85 },
@@ -13,7 +13,6 @@ const LineChat = () => {
         { name: "Ian", marks: 89 },
         { name: "Jane", marks: 95 },
       ];
-      
     return (
         <div>
             
@@ -21,4 +20,4 @@ const LineChat = () => {
     );
 };
 
-export default LineChat;
+export default LineChart;
