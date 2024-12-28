@@ -1,6 +1,10 @@
-import React from 'react';
+import { useState } from "react";
 
 const Phones = () => {
+const [phones, setPhones]=useState([]);
+
+
+
     return (
         <div>
             
