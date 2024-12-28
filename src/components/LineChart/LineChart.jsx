@@ -15,8 +15,9 @@ const LineChart = () => {
   ];
   return (
     <div>
-      <LChart width={500} height={400} data={data}>
-        <Line dataKey="math"></Line>
+      <LChart width={800} height={400} data={data}>
+        <Line dataKey="math" stroke="red"></Line>
+        <Line dataKey={'physics'} stroke="lime"></Line>
       </LChart>
     </div>
   );
