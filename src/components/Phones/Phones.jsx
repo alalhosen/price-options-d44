@@ -11,7 +11,7 @@ useEffect(()=>{
 
     return (
         <div>
-            
+            <h2 className="text-5xl">Phones: {phones.length}</h2>
         </div>
     );
 };

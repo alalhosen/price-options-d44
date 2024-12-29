@@ -14,7 +14,7 @@ const LineChart = () => {
     { name: "Jane", math: 95, physics: 94, chemistry: 97 },
   ];
   return (
-    <div>
+    <div className="pl-12">
       <LChart width={800} height={400} data={data}>
         <Line dataKey="math" stroke="red"></Line>
         <Line dataKey={'physics'} stroke="lime"></Line>
