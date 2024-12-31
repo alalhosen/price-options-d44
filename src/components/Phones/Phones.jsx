@@ -18,6 +18,7 @@ const Phones = () => {
                 name:phone.phone_name,
                 price:parseInt(phone.slug.split('_')[1])
             }
+            return obj;
         });
       });
   }, []);
