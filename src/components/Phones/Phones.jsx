@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BarChart, Bar, ResponsiveContainer } from "recharts";
 
 const Phones = () => {
   const [phones, setPhones] = useState([]);
@@ -14,20 +15,23 @@ const Phones = () => {
       .then((data) => {
         const phoneData = data.data.data;
         const phonesWithFakeData = phoneData.map((phone) => {
-            const obj={
-                name:phone.phone_name,
-                price:parseInt(phone.slug.split('_')[1])
-            }
-            return obj;
-        })
+          const obj = {
+            name: phone.phone_name,
+            price: parseInt(phone.slug.split("_")[1]),
+          };
+          return obj;
+        });
         console.log(phonesWithFakeData);
-    setPhones (phonesWithFakeData)
+        setPhones(phonesWithFakeData);
       });
   }, []);
 
   return (
     <div>
       <h2 className="text-5xl">Phones: {phones.length}</h2>
+      <BarChart width={600} height={500} data={phones}>
+        <Bar dataKey="price" fill="#8884d8" />
+      </BarChart>
     </div>
   );
 };
