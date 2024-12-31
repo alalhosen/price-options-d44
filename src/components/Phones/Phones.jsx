@@ -10,6 +10,7 @@ useEffect(()=>{
     // .then(data =>setPhones(data.data))
 
     axios.get('https://openapi.programming-hero.com/api/phones?search=iphone')
+    .then(data=>console.log(data.data.data));
 },[])
 
     return (
