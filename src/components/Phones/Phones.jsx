@@ -19,7 +19,9 @@ const Phones = () => {
                 price:parseInt(phone.slug.split('_')[1])
             }
             return obj;
-        });
+        })
+        console.log(phonesWithFakeData);
+    setPhones (phonesWithFakeData)
       });
   }, []);
 
