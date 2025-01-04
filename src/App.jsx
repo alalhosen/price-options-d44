@@ -14,7 +14,7 @@ export default function App() {
         Hello world!
       </h1>
       {/* <DaisyNav /> */}
-      <PriceOptions />
+      {/* <PriceOptions /> */}
       <LineChart></LineChart>
       <Phones></Phones>
     </div>

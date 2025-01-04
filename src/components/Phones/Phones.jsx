@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
-import { Audio } from "react-loader-spinner";
+import { Audio, CirclesWithBar } from "react-loader-spinner";
 
 const Phones = () => {
   const [phones, setPhones] = useState([]);
@@ -32,17 +32,31 @@ const Phones = () => {
 
   return (
     <div>
-   {loading &&
-       <Audio
-       height="80"
-       width="80"
-       radius="9"
-       color="green"
-       ariaLabel="three-dots-loading"
-       wrapperStyle
-       wrapperClass
-     />
-   }
+      {loading && (
+        <div>
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="green"
+            ariaLabel="three-dots-loading"
+            wrapperStyle
+            wrapperClass
+          />
+          <CirclesWithBar
+            height="100"
+            width="100"
+            color="#4fa94d"
+            outerCircleColor="#4fa94d"
+            innerCircleColor="#4fa94d"
+            barColor="#4fa94d"
+            ariaLabel="circles-with-bar-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
+      )}
       <h2 className="text-5xl">Phones: {phones.length}</h2>
       <BarChart width={1200} height={500} data={phones}>
         <Bar dataKey="price" fill="#8884d8" />
