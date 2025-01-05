@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
-import { Audio, CirclesWithBar } from "react-loader-spinner";
+import { Audio, CirclesWithBar, DNA } from "react-loader-spinner";
 
 const Phones = () => {
   const [phones, setPhones] = useState([]);
@@ -54,6 +54,15 @@ const Phones = () => {
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}
+          />
+
+          <DNA
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
           />
         </div>
       )}
