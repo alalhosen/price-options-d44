@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
-import { Audio, CirclesWithBar, DNA } from "react-loader-spinner";
+import { Audio, CirclesWithBar, DNA, RotatingLines } from "react-loader-spinner";
 
 const Phones = () => {
   const [phones, setPhones] = useState([]);
@@ -64,6 +64,18 @@ const Phones = () => {
             wrapperStyle={{}}
             wrapperClass="dna-wrapper"
           />
+
+<RotatingLines
+  visible={true}
+  height="96"
+  width="96"
+  color="grey"
+  strokeWidth="5"
+  animationDuration="0.75"
+  ariaLabel="rotating-lines-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
         </div>
       )}
       <h2 className="text-5xl">Phones: {phones.length}</h2>
